@@ -16,7 +16,7 @@ public class End extends JPanel {
         menu();
     }
 
-    public static void menu(){
+    public static void menu(){ // förlora meny var användaren får välja om han vill börja om
         label1.setBounds(200, 160, 500, 23);
         label1.setText("You lost");
         label1.setFont(new Font("TimesRoman", Font.PLAIN, 20));

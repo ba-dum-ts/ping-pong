@@ -10,7 +10,7 @@ public class MAIN {
     static StartMenu menu = new StartMenu();
     static Game play = new Game();
     static End endScreen = new End();
-    static Timer timer = new Timer(16, new refreshPanel());
+    static Timer timer = new Timer(16, new refreshPanel()); // timer
 
     public static void main(String args[]){
         frame.setVisible(true);
@@ -28,7 +28,7 @@ public class MAIN {
         frame.repaint();
     }
 
-    public static void changePanel(JPanel panel){
+    public static void changePanel(JPanel panel){ // ändra panel
         frame.remove(oldPanel);
         frame.add(panel);
         oldPanel = panel;
@@ -44,7 +44,7 @@ public class MAIN {
         panel.grabFocus();
     }
 
-    static class refreshPanel implements ActionListener {
+    static class refreshPanel implements ActionListener { // uppdaterar panel beroende av timer
         public void actionPerformed(ActionEvent e){
             label.setText(MouseInfo.getPointerInfo().getLocation().toString());
             label.setBounds(0, 0, 1000, 20);
